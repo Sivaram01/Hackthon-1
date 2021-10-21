@@ -1,0 +1,57 @@
+body{
+  background-image: url("./black.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 50px 10px;
+  font-family: 'Cinzel', serif;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color:sandybrown;
+  font-weight:600;
+  transition: 0.3s all;
+}
+h1:hover{
+  transform: scale(1.1);
+  color:rgb(11, 147, 245)
+}
+h3{
+  color: rgb(34, 32, 32);
+}
+h3:hover{
+  color: #fff;
+}
+
+
+
+
+p{
+  font-size: 18px;
+  font-style: oblique;
+  font-weight: 500;
+ line-height:25px;
+ margin-top: 20px;
+}
+
+.list-item{
+  background: #ff4b1f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1fddff, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff4b1f,#1fddff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  ;
+  color:  #ece8e8;;
+  text-align: center;
+  margin: 20px 10px;
+  padding:70px 50px;
+  border-radius: 0 20px 20px 0;
+  box-shadow:  5px 3px 2px 2px rgb(247 247 247);
+  transition: 0.3s all;
+}
+
+
+.list-item:hover{
+  transform: scale(1.1);
+  color:black;
+}
