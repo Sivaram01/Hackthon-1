@@ -1,3 +1,5 @@
+//Building the Front-end section using innerHTML
+
 document.body.innerHTML =   `
 
 <section id = "booksContainer" class="container">
@@ -9,13 +11,16 @@ document.body.innerHTML =   `
   </div>
 </section>`
 
+//By using Async and Await function fetch all the data from api to display list of books
+
 async function getAllBooks(){
   const data = await fetch("https://www.anapioficeandfire.com/api/books?pageSize=30");
   const books = await data.json();
   console.log(books)
 
   const bookList = document.querySelector("#bookList");
-
+  
+  // By using ForEach Method Looping the json Data to display it in orderwise
   books.forEach((book) => {
     bookList.innerHTML += `
     <div class="col-12 col-sm-6 col-md-6 col-xl-4">
@@ -32,15 +37,17 @@ async function getAllBooks(){
   });
 }
 
-getAllBooks()
+getAllBooks()// executing the list of books
 
-
+//By using Async and Await function fetch all the data from api to get all the characters of books 
 async function getAllcharacters() {
   const Data = await fetch("https://anapioficeandfire.com/api/characters?pageSize=9")
   const characters = await Data.json()
   console.log(characters)
 
   const characterList = document.querySelector("#characterList");
+  
+    //By using ForEach Method Looping the json Data to display the characters of books in orderwise
   characters.forEach((character) => {
     characterList.innerHTML += `
     <div class="col-12 col-sm-6 col-md-4">
@@ -55,4 +62,4 @@ async function getAllcharacters() {
 
 }
 
-getAllcharacters()
+getAllcharacters() //executing the list of characters in the books
